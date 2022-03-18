@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug S3FileUploader",
+            "program": "${workspaceFolder:S3FileUploader}/.build/debug/S3FileUploader",
+            "args": [],
+            "cwd": "${workspaceFolder:S3FileUploader}",
+            "preLaunchTask": "swift: Build Debug S3FileUploader"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release S3FileUploader",
+            "program": "${workspaceFolder:S3FileUploader}/.build/release/S3FileUploader",
+            "args": [],
+            "cwd": "${workspaceFolder:S3FileUploader}",
+            "preLaunchTask": "swift: Build Release S3FileUploader"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test S3FileUploader",
+            "program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
+            "args": [
+                ".build/debug/S3FileUploaderPackageTests.xctest"
+            ],
+            "cwd": "${workspaceFolder:S3FileUploader}",
+            "preLaunchTask": "swift: Build All"
+        }
+    ]
+}
